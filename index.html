@@ -1,58 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  /* The image used */
-  background-image: url("img/berge.jpg");
-  
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  
-  /* Full height */
-  height: 100%; 
-  
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
-<div class="bg-image"></div>
-
-<div class="bg-text">
-  <h1 style="font-size:50px">Bayern in guter Hand</h1>
-</div>
-
-
-</body>
+   <head>
+      <title>Bayern in guter Hand</title>
+      <meta name="robots" content="noindex">
+      <style>
+         body, html {
+         margin:0;
+         height: 100vh;
+         width: 100%;
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         .bg-image {
+         background-image:url(https://raw.githubusercontent.com/anon241/anon241.github.io/main/img/berge.jpg); 
+         position: relative;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 100%;
+         text-align: center;
+         }
+         .filter-blur {
+         backrgound:rgba(240, 227, 227, 0.5);
+         backdrop-filter:blur(15px);
+         position:absolute;
+         height:100%;
+         width:100%;
+         z-index:1
+         }
+         h1 {
+         z-index:2;
+         color:white;
+         font-size: 2.5em;
+         text-transform: uppercase;}
+         .container {
+         width:100%;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         position:absolute;
+         z-index:2}
+         a {
+         color: white;
+         text-decoration: none;
+         border: 2px solid white;
+         padding: 5px 10px;
+         border-radius: 10px;
+         transition: all 0.3s ease;
+         }
+         a:hover {
+         background-color: white;
+         color: black;
+         }
+         .terms {
+         position: absolute;
+         top: 95%;
+         margin-left: auto;
+         margin-right: auto;
+         left: 0;
+         right: 0;
+         text-align: center;
+         z-index:2;
+         }
+         .terms a {
+         text-decoration: none;
+         margin-left: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="bg-image">
+         <div class="filter-blur"></div>
+         <div class="container">
+            <h1>Bayern in guter Hand</h1>
+         </div>
+         <div class="terms">
+            <a href="impressum.html">Impressum</a>	
+         </div>
+      </div>
+   </body>
 </html>
